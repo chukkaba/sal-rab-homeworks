@@ -7,7 +7,7 @@ function renderCartItem(item) {
 
     let sum = product.count * product.price
 
-    itemCountText = `${product.count} x ${product.price} ₽ = ${sum} ₽`
+    itemCountText = `${product.count} × ${product.price} ₽ = ${sum} ₽`
 
     // product - объект вида {id: id, title: title, count: count, price: price}
     // например, {id: 1, title: 'Пицца', count: 5, price: '500.00'}, где
