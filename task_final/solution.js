@@ -47,18 +47,21 @@ function sendRequest(name, phone, address, goods, sum) {
             goodsMasive.push(position);
         }
      
-    let data = {
-
+    let dataObject = {
         client: `${name} ${phone}`,
 
         order:{
-            address: `${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor}, кв. ${address.flat}`,
+            address: `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв. ${address.flat}`,
             sum: sum,
         },
-        
+            
         goods: goodsMasive,
     }
-       
+    
+    let data = {
+        data: dataObject,
+    }
+    
     let jsonData = JSON.stringify(data);
 
     return jsonData;
